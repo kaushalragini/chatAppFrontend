@@ -15,11 +15,15 @@ function MessageList({ messages }) {
       <ul>
         {messages.map((message, index) => (
           <li key={index}>
-            <div className="img-div">{message.username}</div>
-            <strong>{message.username}:</strong>
-            {message.message}
-            <button onClick={() => handleLikeClick(index)}>👍🏻</button>
-            <span className="like-count">{likes[index] || 0}</span>
+            <div className="name-div">
+              <div className="img-div">{message.username}</div>
+              <strong>{message.username}:</strong>
+            </div>
+            <div className="chat-box">
+              {message.message}
+              <button onClick={() => handleLikeClick(index)}>👍🏻</button>
+              <span className="like-count">{likes[index] || 0}</span>
+            </div>
           </li>
         ))}
       </ul>
