@@ -21,8 +21,10 @@ function MessageList({ messages }) {
             </div>
             <div className="chat-box">
               {message.message}
-              <button onClick={() => handleLikeClick(index)}>👍🏻</button>
-              <span className="like-count">{likes[index] || 0}</span>
+              <div>
+                <button onClick={() => handleLikeClick(index)}>👍🏻</button>
+                <span className="like-count">{likes[index] || 0}</span>
+              </div>
             </div>
           </li>
         ))}

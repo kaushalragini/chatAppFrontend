@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import MessageList from "./MessageList";
-
 import InputEmoji from "react-input-emoji";
 
 const user_list = ["Alan", "Bob", "Carol", "Dean", "Elin"];
@@ -25,6 +24,11 @@ function Chat() {
       setCurrentMessage("");
     }
   };
+  // useEffect(() => {
+  //   socket.on("message", (message) => {
+  //     setMessages((messages) => [...messages, message]);
+  //   });
+  // }, [messages, messages.length]);
 
   return (
     <div className="chat-container">
